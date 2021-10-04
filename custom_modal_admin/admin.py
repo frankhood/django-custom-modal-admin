@@ -8,7 +8,7 @@ class CustomModalAdmin(admin.ModelAdmin):
         js = [
             'https://code.jquery.com/jquery-2.2.4.min.js',
             'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
-            'admin/js/custom_modal_admin.js',
+            'custom_modal_admin/custom_modal_admin.js',
         ]
         css = {
             'all': (
