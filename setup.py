@@ -46,7 +46,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 requirements = open('requirements.txt').readlines()
 
 setup(
-    name='django-custom-modal-admin',
+    name='custom-modal-admin',
     version=version,
     description="""Your project description goes here""",
     long_description=readme + '\n\n' + history,
@@ -60,7 +60,7 @@ setup(
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
-    keywords='custom-modal-admin',
+    keywords='django-custom-modal-admin',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django :: 1.11',
