@@ -60,7 +60,7 @@ setup(
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
-    keywords='django-custom-modal-admin',
+    keywords='custom-modal-admin',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django :: 1.11',
