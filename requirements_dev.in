@@ -1,0 +1,10 @@
+invoke
+twine
+wheel
+zest.releaser
+bumpversion
+pre-commit
+coverage
+tox
+pip-tools~=5.5.0
+Django>2.2

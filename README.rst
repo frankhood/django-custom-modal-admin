@@ -126,12 +126,6 @@ And the required js into extrahead block:
 With this last implementation you can avoid to inerith CustomModalAdmin in all yours admin.
 
 
-Features
---------
-
-* Add a custom js to display easy modal in your django admin
-
-
 Credits
 -------
 
