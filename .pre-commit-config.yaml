@@ -1,0 +1,38 @@
+default_language_version:
+    python: python3
+fail_fast: true
+repos:
+  - repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    - id: black
+      name: "👾 Black Validation"
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.8.0
+    hooks:
+    - id: flake8
+      name: "👾 Flake8 Validation"
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.7.0
+    hooks:
+    - id: isort
+      name: "👾 Isort Validation"
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.790
+    hooks:
+    - id: mypy
+      name: "👾 Mypy Validation"
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1  # Use the ref you want to point at
+    hooks:
+    - id: check-merge-conflict
+      name: "💀 Checking Merge Conflict"
+  - repo: local
+    hooks:
+    - id: django-test
+      name: "🪲 Django Testing"
+      entry: python runtests.py
+      always_run: true
+      verbose: true
+      pass_filenames: false
+      language: system

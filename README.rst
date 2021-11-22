@@ -2,14 +2,15 @@
 Django custom modal admin
 =============================
 
-.. image:: https://badge.fury.io/py/django-custom-modal-admin.svg
+... image:: https://badge.fury.io/py/django-custom-modal-admin.svg/?style=flat-square
     :target: https://badge.fury.io/py/django-custom-modal-admin
 
-.. image:: https://travis-ci.org/frankhood/django-custom-modal-admin.svg?branch=master
-    :target: https://travis-ci.org/frankhood/django-custom-modal-admin
+.. image:: https://readthedocs.org/projects/pip/badge/?version=latest&style=flat-square
+    :target: https://django-custom-modal-admin.readthedocs.io/en/latest/
 
-.. image:: https://codecov.io/gh/frankhood/django-custom-modal-admin/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/frankhood/django-custom-modal-admin
+.. image:: https://img.shields.io/coveralls/github/frankhood/django-custom-modal-admin/main?style=flat-square
+    :target: https://coveralls.io/github/frankhood/django-custom-modal-admin?branch=main
+    :alt: Coverage Status
 
 Your project description goes here
 
@@ -124,12 +125,6 @@ And the required js into extrahead block:
 
 
 With this last implementation you can avoid to inerith CustomModalAdmin in all yours admin.
-
-
-Features
---------
-
-* Add a custom js to display easy modal in your django admin
 
 
 Credits
