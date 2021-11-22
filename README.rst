@@ -2,7 +2,7 @@
 Django custom modal admin
 =============================
 
-... image:: https://badge.fury.io/py/django-custom-modal-admin.svg/?style=flat-square
+.. image:: https://badge.fury.io/py/django-custom-modal-admin.svg/?style=flat-square
     :target: https://badge.fury.io/py/django-custom-modal-admin
 
 .. image:: https://readthedocs.org/projects/pip/badge/?version=latest&style=flat-square
