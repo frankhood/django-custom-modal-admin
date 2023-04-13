@@ -6,12 +6,13 @@ class CustomModalAdmin(admin.ModelAdmin):
 
     class Media:
         js = [
-            'https://code.jquery.com/jquery-2.2.4.min.js',
-            'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
+            "admin/js/vendor/jquery/jquery.js",
+            'admin/js/jquery.init.js',
+            "js/jquery-ui.min.js",
             'js/custom_modal_admin.js',
         ]
         css = {
             'all': (
-                'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css',
+                "css/jquery-ui.css",
             ),
         }
