@@ -42,7 +42,7 @@ identify==2.4.0
     # via pre-commit
 idna==3.3
     # via requests
-importlib-metadata==4.8.2
+importlib-metadata==4.2.0
     # via
     #   backports.entry-points-selectable
     #   click
