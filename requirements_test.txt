@@ -22,8 +22,6 @@ charset-normalizer==2.0.7
     # via requests
 click==8.0.3
     # via pip-tools
-codecov==2.1.12
-    # via -r requirements_test.in
 colorama==0.4.4
     # via
     #   twine
@@ -32,7 +30,6 @@ coverage==6.1.2
     # via
     #   -r requirements_dev.in
     #   -r requirements_test.in
-    #   codecov
 distlib==0.3.3
     # via virtualenv
 docutils==0.18
@@ -104,7 +101,6 @@ readme-renderer==30.0
     # via twine
 requests==2.26.0
     # via
-    #   codecov
     #   requests-toolbelt
     #   twine
     #   zest.releaser
