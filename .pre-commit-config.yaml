@@ -2,31 +2,76 @@ default_language_version:
     python: python3
 fail_fast: true
 repos:
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.7.0
+    hooks:
+    - id: pyupgrade
+      stages: [commit]
+      name: "✅ Python Upgrade"
+      args:
+        - "--py38-plus"
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: 1.14.0  # replace with latest tag on GitHub
+    hooks:
+    -   id: django-upgrade
+        stages: [commit]
+        name: "✅ Django Upgrade"
+        args: [--target-version, "4.2"]
   - repo: https://github.com/psf/black
-    rev: 20.8b1
+    rev: 22.3.0
     hooks:
     - id: black
-      name: "👾 Black Validation"
+      stages: [commit]
+      name: "✅ Black Reformatting"
+      exclude: ^.*\b(migrations)\b.*$
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v1.4
+    hooks:
+    - id: autoflake
+      stages: [commit]
+      name: "✅ Autoflake Reformatting"
+      language: python
+      'types': [python]
+      require_serial: true
+      exclude: |
+        (?x)(
+          .*?/migrations/.* 
+        )
+      entry: autoflake
+      args:
+        - "--ignore-init-module-imports"
+        - "--remove-all-unused-imports"
+        - "--in-place"
+        - "--remove-unused-variables"
   - repo: https://github.com/PyCQA/flake8
     rev: 3.8.0
     hooks:
     - id: flake8
-      name: "👾 Flake8 Validation"
+      stages: [commit]
+      name: "✅ Flake8 Validation"
   - repo: https://github.com/PyCQA/isort
-    rev: 5.7.0
+    rev: 5.12.0
     hooks:
     - id: isort
-      name: "👾 Isort Validation"
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.790
+      stages: [commit]
+      name: "✅ Isort Validation"
+  - repo: local
     hooks:
     - id: mypy
-      name: "👾 Mypy Validation"
+      stages: [commit]
+      name: "✅ Mypy Validation"
+      entry: mypy
+      language: python
+      types: [python]
+      args: ["--install-types", "--non-interactive", "--python-version=3.11"]
+      additional_dependencies: [
+        "mypy~=0.931"
+      ]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1  # Use the ref you want to point at
     hooks:
     - id: check-merge-conflict
-      name: "💀 Checking Merge Conflict"
+      name: "✅ Checking Merge Conflict"
   - repo: local
     hooks:
     - id: django-test
